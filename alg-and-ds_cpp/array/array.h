@@ -12,4 +12,8 @@ public:
 	Array(int size);
 	Array(const Array& array);
 	~Array();
+
+	int size();
+	bool empty();
+	int* at();
 };
