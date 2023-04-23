@@ -1,6 +1,6 @@
 .vs
-*/*.vcxproj
-*/*.sln
-*/x64/
-*/draft.*
-*/main.cpp
+alg-and-ds_cpp/**/*.vcxproj*
+alg-and-ds_cpp/**/*.sln
+alg-and-ds_cpp/**/x64/
+alg-and-ds_cpp/**/draft.*
+alg-and-ds_cpp/**/main.cpp
