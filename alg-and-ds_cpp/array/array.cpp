@@ -1,5 +1,23 @@
 #include "array.h"
 
+// overloaded output operator
+std::ostream& operator<<(std::ostream& os, const Array& array) {
+	os << '[';
+	for (int i = 0; i < array.size_; i++) {
+		os << array.array_[i] << (i == array.size_ - 1 ? "" : ", ");
+	}
+	os << ']';
+	return os;
+}
+
+// overloaded input operator
+std::istream& operator>>(std::istream& is, const Array& array) {
+	for (int i = 0; i < array.size_; i++) {
+		is >> array.array_[i];
+	}
+	return is;
+}
+
 // default constructor
 Array::Array(){
 	size_ = 1;
