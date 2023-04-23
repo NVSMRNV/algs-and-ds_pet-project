@@ -1,0 +1,6 @@
+.vs
+*/*.vcxproj
+*/*.sln
+*/x64/
+*/draft.*
+*/main.cpp
