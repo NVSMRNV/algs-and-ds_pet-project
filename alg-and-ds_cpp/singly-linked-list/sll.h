@@ -20,5 +20,9 @@ public:
 	void print();
 	bool empty();
 	void pop_front();
+	void pop_back();
 	void push_back(int data);
+	void push_front(int data);
+	Node& at(int index);
+	void insert(int index, int data);
 };
