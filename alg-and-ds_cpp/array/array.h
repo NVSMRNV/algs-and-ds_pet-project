@@ -19,6 +19,7 @@ public:
 
 	int& operator[] (int index);
 	bool operator== (const Array& array);
-	Array& operator+= (const int& new_value);
+	const Array& operator+= (const Array& array);
+	const Array& operator+= (const int value);
 	const Array& operator= (const Array& array);
 };

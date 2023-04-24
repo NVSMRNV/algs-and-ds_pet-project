@@ -89,3 +89,31 @@ bool Array::operator==(const Array& array) {
 		return true;
 	}
 }
+
+// increases every element of the array with the corresponding element of another array
+const Array& Array::operator+= (const Array& array) {
+	if (size_ == array.size_) {
+		for (int i = 0; i < size_; i++) {
+			array_[i] += array.array_[i];
+		}
+	}
+	return *this;
+}
+
+// increases every element of the array by the specified value
+const Array& Array::operator+= (const int value) {
+	for (int i = 0; i < size_; i++) {
+		array_[i] += value;
+	}
+	return *this;
+}
+
+// overwrites every element of the array by the corresponding element of another array
+const Array& Array::operator=(const Array& array) {
+	if (size_ == array.size_) {
+		for (int i = 0; i < size_; i++) {
+			array_[i] = array.array_[i];
+		}
+	}
+	return *this;
+}
