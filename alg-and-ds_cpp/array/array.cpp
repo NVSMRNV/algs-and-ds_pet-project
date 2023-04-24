@@ -58,12 +58,13 @@ bool Array::empty() {
 	return size_ == 0;
 }
 
-// returns a reference to the element at specified location pos, with bounds checking
-int* Array::at(int index) {
+// returns a reference to the element at specified location pos
+// with bounds checking
+int& Array::at(int index) {
 	if (index < 0 || index >= size_) {
 		throw std::out_of_range("Index out of range.");
 	}
 	else {
-		return array_ + index;
+		return array_[index];
 	}
 }

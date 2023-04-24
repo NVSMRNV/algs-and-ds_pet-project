@@ -15,5 +15,10 @@ public:
 
 	int size();
 	bool empty();
-	int* at(int index);
+	int& at(int index);
+
+	int& operator[] (int index);
+	bool operator== (const Array& array);
+	Array& operator+= (const int& new_value);
+	const Array& operator= (const Array& array);
 };
