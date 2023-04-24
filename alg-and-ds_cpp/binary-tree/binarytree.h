@@ -10,4 +10,9 @@ public:
 	Node(int data);
 };
 
-
+class BinaryTree {
+	Node* root_;
+public:
+	BinaryTree();
+	~BinaryTree();
+};
