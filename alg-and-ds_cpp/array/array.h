@@ -15,5 +15,5 @@ public:
 
 	int size();
 	bool empty();
-	int* at();
+	int* at(int index);
 };

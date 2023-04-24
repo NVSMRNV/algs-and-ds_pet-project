@@ -47,3 +47,23 @@ Array::Array(const Array& array){
 Array::~Array(){
 	delete[] array_;
 }
+
+// returns the number of elements in the container
+int Array::size() {
+	return size_;
+}
+
+// checks if the container has no elements
+bool Array::empty() {
+	return size_ == 0;
+}
+
+// returns a reference to the element at specified location pos, with bounds checking
+int* Array::at(int index) {
+	if (index < 0 || index >= size_) {
+		throw std::out_of_range("Index out of range.");
+	}
+	else {
+		return array_ + index;
+	}
+}
