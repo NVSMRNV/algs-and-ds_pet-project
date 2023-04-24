@@ -22,4 +22,6 @@ public:
 	const Array& operator+= (const Array& array);
 	const Array& operator+= (const int value);
 	const Array& operator= (const Array& array);
+
+	void sort();
 };

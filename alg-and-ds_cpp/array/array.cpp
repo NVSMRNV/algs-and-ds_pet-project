@@ -117,3 +117,8 @@ const Array& Array::operator=(const Array& array) {
 	}
 	return *this;
 }
+
+//
+void Array::sort() {
+
+}
