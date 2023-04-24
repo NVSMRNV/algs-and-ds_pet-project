@@ -15,4 +15,10 @@ class SinglyLinkedList {
 public:
 	SinglyLinkedList();
 	~SinglyLinkedList();
+
+	int size();
+	void print();
+	bool empty();
+	void pop_front();
+	void push_back(int data);
 };
