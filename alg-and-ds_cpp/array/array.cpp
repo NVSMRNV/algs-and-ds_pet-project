@@ -68,3 +68,24 @@ int& Array::at(int index) {
 		return array_[index];
 	}
 }
+
+// returns a reference to the element at specified location pos 
+// no bounds checking is performed. 
+int& Array::operator[](int index) { 
+	return array_[index];
+}
+
+// compares the contents of two arrays
+bool Array::operator==(const Array& array) {
+	if (size_ != array.size_) {
+		return false;
+	}
+	else {
+		for (int i = 0; i < size_; i++) {
+			if (array_[i] != array.array_[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
+}
