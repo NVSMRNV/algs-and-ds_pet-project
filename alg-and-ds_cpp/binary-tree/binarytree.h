@@ -15,4 +15,8 @@ class BinaryTree {
 public:
 	BinaryTree();
 	~BinaryTree();
+
+	void insert(int data);
+	Node* search(int data);
+	void inorder_walk();
 };
