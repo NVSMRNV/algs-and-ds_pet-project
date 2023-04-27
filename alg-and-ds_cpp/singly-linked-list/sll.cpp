@@ -69,3 +69,59 @@ void SinglyLinkedList::push_back(int data) {
 		current->next_ = new Node(data);
 	}
 }
+
+// searches for an item with the specified key in the list
+Node& SinglyLinkedList::at(int key) {
+	Node* current = head_;
+	while (current != nullptr && current->data_ != key) {
+		current = current->next_;
+	}
+	return *current;
+}
+
+// inserts an element at biginning
+void SinglyLinkedList::push_front(int data) {
+	Node* node = new Node(data);
+	if (head_ == nullptr) {
+		head_ = node;
+	}
+	else {
+		node->next_ = head_;
+		head_ = node;
+	}
+}
+
+// removes the last element
+void SinglyLinkedList::pop_back() {
+	if (head_ == nullptr) {
+		return;
+	}
+	else if (head_->next_ == nullptr) {
+		Node* tmp = head_;
+		head_ = tmp->next_;
+		delete tmp;
+	}
+	else {
+		Node* current = head_;
+		Node* previous = nullptr;
+		while (current->next_ != nullptr) {
+			previous = current;
+			current = current->next_;
+		}
+		previous->next_ = nullptr;
+		delete current;
+	}
+}
+
+// insert element in the list
+void SinglyLinkedList::insert(int key, int data) {
+	Node* previous = &at(key);
+	if (previous == nullptr) {
+		return;
+	}
+	else {
+		Node* node = new Node(data);
+		node->next_ = previous->next_;
+		previous->next_ = node;
+	}
+}
