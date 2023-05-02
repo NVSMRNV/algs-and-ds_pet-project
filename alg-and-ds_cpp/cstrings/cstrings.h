@@ -1,7 +1,4 @@
 #pragma once
 
-int strlen();
-bool strcmp();
-char* substr();
-char* strcat();
-char* strcpy();
+int strlen_(const char* str);
+int strcmp_(const char* str_1, const char* str_2);
