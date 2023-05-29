@@ -68,7 +68,7 @@ void oddEvenSort(int* a, int n){
 				swap(a[i], a[i + 1]);
 				is_sorted = false;
 			}
-			i++;
+			i += 2;
 		}
 
 		int j = 0;
@@ -77,7 +77,7 @@ void oddEvenSort(int* a, int n){
 				swap(a[j], a[j + 1]);
 				is_sorted = false;
 			}
-			j++;
+			j += 2;
 		}
 	}
 }
