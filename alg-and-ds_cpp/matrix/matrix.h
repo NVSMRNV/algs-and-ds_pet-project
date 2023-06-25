@@ -12,4 +12,10 @@ public:
 
 	int rows() const;
 	int cols() const;
+
+	void set(int row, int col, int value);
+	int get(int row, int col) const;
+
+	void fill();
+	void print();
 };
